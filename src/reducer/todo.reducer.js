@@ -1,6 +1,6 @@
 import uuid from 'uuid/v4'
 
-const todoReducer = (state, action) => {
+const reducer = (state, action) => {
   switch (action.type) {
     case 'ADD':
       return [...state, { id: uuid(), task: action.task, completed: false }]
@@ -19,7 +19,7 @@ const todoReducer = (state, action) => {
   }
 }
 
-export default todoReducer
+export default reducer
 
 // addTodo: newTodoText => {
 //   setTodos([...todos, { id: uuid(), task: newTodoText, completed: false }]);
